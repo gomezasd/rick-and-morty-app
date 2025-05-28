@@ -1,0 +1,14 @@
+<h2 style="text-align: center;">👥 Personajes del episodio</h2>
+
+<div *ngIf="characters.length === 0" style="text-align: center;">Cargando personajes...</div>
+
+<div class="character-grid">
+  <div *ngFor="let char of characters" class="character-card">
+    <img [src]="char.image" [alt]="char.name" class="character-img" />
+    <div class="character-name">{{ char.name }}</div>
+    <div class="character-info">Especie: {{ char.species }}</div>
+    <div class="character-info">Estado: {{ char.status }}</div>
+  </div>
+</div>
+
+
